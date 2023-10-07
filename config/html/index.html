@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>File Upload Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .linkContainer {
+      height: 2rem;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    h1,
+    h3,
+    h4 {
+      padding: 0;
+      text-align: center;
+    }
+
+    form {
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 3rem;
+    }
+
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    footer p {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>SuperStack</h1>
+      <h3>Your local object storage service</h3>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input
+          type="file"
+          name="fileInput"
+          id="fileInput"
+          accept=".jpg, .jpeg, .png, .pdf"
+        />
+        <button type="button" onclick="uploadFile()">Upload</button>
+      </form>
+    </div>
+    <br />
+    <div class="linkContainer">
+      <a id="responseLink" href="#" target="_blank"></a>
+    </div>
+    <footer>
+      <p>Last Updated: October, 7, 2023</p>
+    </footer>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

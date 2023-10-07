@@ -1,0 +1,8 @@
+FROM nginx:1.24.0-alpine
+
+RUN rm /etc/nginx/nginx.conf
+RUN rm -rf /usr/share/nginx/html/*.html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
